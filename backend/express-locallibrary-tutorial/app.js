@@ -9,6 +9,9 @@ const usersRouter = require('./routes/users');
 const coolRouter = require('./routes/cool')
 
 const app = express();
+const mongoose = require('mongoose')
+mongoose.set("strictQuery",false)
+const mongoDB = "mongodb+srv://shriharsh:123qwer@cluster0.kypxcfq.mongodb.net/?retryWrites=true&w=majority"
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
