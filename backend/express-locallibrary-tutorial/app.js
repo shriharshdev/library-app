@@ -12,7 +12,12 @@ const catalogRouter = require('./routes/catalog')
 const app = express();
 const mongoose = require('mongoose')
 mongoose.set("strictQuery",false)
-const mongoDB = "mongodb+srv://shriharsh:123qwer@cluster0.kypxcfq.mongodb.net/?retryWrites=true&w=majority"
+const mongoDB = "mongodb+srv://shriharshdev:lLG3bCti3nWk7adS@cluster0.ynhzz9a.mongodb.net/local_library?retryWrites=true&w=majority"
+
+main().catch((err) => console.log(err));
+async function main() {
+  await mongoose.connect(mongoDB);
+}
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
